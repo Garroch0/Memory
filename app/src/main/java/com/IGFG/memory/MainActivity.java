@@ -2,8 +2,12 @@ package com.IGFG.memory;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     Button botao4;
     Button botao5;
     Button botao6;
+    TextView parabens;
+    TextView parabens_2;
+    ProgressBar progresso;
 
 
 
@@ -35,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
         botao4 = (Button)findViewById(R.id.quatro);
         botao5 = (Button)findViewById(R.id.cinco);
         botao6 = (Button)findViewById(R.id.seis);
-
-
-
+        parabens = (TextView)findViewById(R.id.prb);
+            parabens.setVisibility(View.GONE);
+        parabens_2 = (TextView)findViewById(R.id.prb_2);
+            parabens_2.setVisibility(View.GONE);
     }
 
     public List<Integer> geraNumeros() {
