@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Integer numeros;
+    List<Integer> numeros;
     Integer indice = 0;
     Button reiniciar;
     Button botao1;
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             parabens.setVisibility(View.GONE);
         parabens_2 = (TextView)findViewById(R.id.prb_2);
             parabens_2.setVisibility(View.GONE);
+        progresso = (ProgressBar)findViewById(R.id.progressBar);
+        
     }
     public void trataBotao(View click) {
     }
