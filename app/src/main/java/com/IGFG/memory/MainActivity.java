@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        numeros = geraNumeros();
         reiniciar = (Button)findViewById(R.id.reiniciar);
         botao1 = (Button)findViewById(R.id.um);
         botao2 = (Button)findViewById(R.id.dois);
@@ -46,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             parabens.setVisibility(View.GONE);
         parabens_2 = (TextView)findViewById(R.id.prb_2);
             parabens_2.setVisibility(View.GONE);
+    }
+    public void trataBotao(View click) {
     }
 
     public List<Integer> geraNumeros() {
