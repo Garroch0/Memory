@@ -46,9 +46,31 @@ public class MainActivity extends AppCompatActivity {
         parabens_2 = (TextView)findViewById(R.id.prb_2);
             parabens_2.setVisibility(View.GONE);
         progresso = (ProgressBar)findViewById(R.id.progressBar);
-        
+
     }
     public void trataBotao(View click) {
+        Button botao = (Button) click;
+        Integer numero_clicado = Integer.parseInt( botao.getText().toString());
+        if (numero_clicado == numeros.get(indice)) {
+            indice++;
+            botao.setVisibility(View.GONE);
+        }
+        else{
+            visible();
+            indice=0;
+        }
+
+    }
+    public void visible(){
+        botao1.setVisibility(View.VISIBLE);
+        botao2.setVisibility(View.VISIBLE);
+        botao3.setVisibility(View.VISIBLE);
+        botao4.setVisibility(View.VISIBLE);
+        botao5.setVisibility(View.VISIBLE);
+        botao6.setVisibility(View.VISIBLE);
+        parabens.setVisibility(View.GONE);
+        parabens_2.setVisibility(View.GONE);
+
     }
 
     public List<Integer> geraNumeros() {
